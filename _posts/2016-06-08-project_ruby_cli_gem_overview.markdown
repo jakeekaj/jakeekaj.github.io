@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Project: Ruby CLI Gem Overview"
-date:   2016-06-08 04:21:09 +0000
+date:   2016-06-08 00:21:09 -0400
 ---
 
 *This post was transferred from an older blog dated 3/16/2016*
