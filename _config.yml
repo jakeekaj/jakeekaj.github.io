@@ -1,0 +1,21 @@
+# Site settings
+title: :code smash
+header-img: img/home-bg.png
+email: jakemalto2014@gmail.com
+copyright_name: jakeekaj
+description: > # this means to ignore newlines until "baseurl:"
+  To code or not to code. That's not a question. 
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: https://twitter.com/jcmalto
+github_username:  jakeekaj
+learn_profile: jakeekaj
+email_username: jakemalto2014@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
