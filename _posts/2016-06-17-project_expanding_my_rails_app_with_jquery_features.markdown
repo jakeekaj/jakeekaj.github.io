@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Project: Expanding my Rails App with jQuery features"
-date:   2016-06-17 05:27:57 +0000
+date:   2016-06-17 01:27:57 -0400
 ---
 
 
@@ -11,11 +11,11 @@ My very first Rails App was a tough one. While the models are pretty basic, I mu
 
 I figured that the best way to make use of JSON and jQuery is at the index page for movies. This is the home page where users are directed to after logging in.  
 
-[Imgur](http://i.imgur.com/IgpxRIA.png)
+![](http://i.imgur.com/IgpxRIA.png)
 
 Since we are dealing with a nested resource of movies and reviews, I decided to load the index of all reviews for each movie. I simply had to add a link at each movie entry, if they have reviews. The index action for Reviews is defaulted to a json page, which we can use to render the details of each review on the index page. Without any page refreshes and redirects, I am able to load all the reviews for each movie.
 
-[Imgur](http://i.imgur.com/zEtOc8H.png)
+![](http://i.imgur.com/zEtOc8H.png)
 
 With the help of the `<script>` element at the bottom of the index page, I am able to "hijack" the `Show Review` link and load the reviews from the background.
 
@@ -48,7 +48,7 @@ Since the response is already in JSON format, it is quite easy to convert it to 
 
 I also applied the same principle in rendering the Contents of each Review, this time on the Movie Show page. 
 
-[Imgur](http://i.imgur.com/4Fq3m8Q.png)
+![](http://i.imgur.com/4Fq3m8Q.png)
 
 To achieve this, I had to make sure to render the Show action for the Reviews Controller, the right way. 
 
@@ -68,7 +68,7 @@ Thanks to the Active Model Serialization gem, I am able to select which info to 
 
 I had a hard time in adding new features on the current Movie index and show pages. There was simply a lot going on in each page because most of the resource can already be accessed with just the two actions. That's why I decided to create a new resource just for this feature. I added a new Model which is a `Quote` resource, that simply `belongs_to` a Movie. A movie `has_many` Quotes, obviously. 
 
-[Imgur](http://i.imgur.com/V4GSYJh.png)
+![](http://i.imgur.com/V4GSYJh.png)
 
 As you can see, you can easily add new Quotes to the Movie with the form at the bottom. This form is "hijacked" since when you submit it, it won't direct you anywhere. It just creates the resource, and instantly adds it the DOM with the help of the JSON response that we made use of.
 
