@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Sinatra Movie Database with CRUD features"
-date:   2016-06-28 16:14:26 +0000
+title:  "Project: Sinatra Movie Database - CRUD features"
+date:   2016-06-28 12:14:26 -0400
 ---
 
 This post was transferred from an older blog(Jekyll) dated 4/13/2016. 
