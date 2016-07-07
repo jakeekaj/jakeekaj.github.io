@@ -130,11 +130,14 @@ Filtering is made quite easy with the help of Angular Filters. Filtering is quit
 These two buttons will take care of the sorting with the help of `sort_data_by()`method. 
 
 'app/assets/javascripts/templates/home/movies.html'
+
 ```
+
 ...
  <button class="btn btn-primary"  ng-click="ctrl.sort_data_by('title')">Title</button> |
  <button class="btn btn-primary"  ng-click="ctrl.sort_data_by('reviews')">Reviews</button>
   ...
+    
 ```
 
 The data will then be passed on in the controller as such:
