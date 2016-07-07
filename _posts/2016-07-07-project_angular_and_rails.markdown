@@ -1,21 +1,21 @@
 ---
 layout: post
 title:  "Project: Angular and Rails"
-date:   2016-07-07 04:22:39 +0000
+date:   2016-07-07 00:22:40 -0400
 ---
 
 
 Getting started was probably the hardest part of this project. Connecting Angular and Rails is a challenge because there are many approaches you can take. After reading dozens of online resources, I ended up following Luke Ghenco's [Guide](https://medium.com/@lukeghenco/create-an-angular-js-app-with-a-restful-rails-api-pt-2-8fbc7177e334#.l1a8merhq) on Medium which was very clear and straightforward. 
 
-## The Back-end: Rails API
+**The Back-end: Rails API**
 
 Since I previously worked on `Movie` and `Reviews` model for my last two projects, I decided to use the same model as well. `Review` `belongs_to` a `Movie`and a `Movie has_many Reviews`. Seems pretty simple, right? I decided to make use of a nested resource to have RESTful routes in the process. 
 
-### JSON 
+**JSON** 
 
 Since we will be relying on JSON data, we simply need the Rails API to handle all these. Inside the Movies and Reviews Controllers back in Rails, I simply had to include the code `respond_to :json` in order to make sure that we generate JSON when working with our models. 
 
-### Routes
+**Routes**
 
 To make sure that proper routes are configured, here's my routes.rb file:
 
@@ -43,11 +43,11 @@ As you can see, I included a `namespace` to indicate that we are working an API.
 The `ui-view` is a directive that's part of the ui-router angular module. It takes care of the routing on the front-end of the app. Now that we've buil the back-end, we can now work on the front-end. 
 
 
-## The front-end: Angular JS
+**The front-end: Angular JS**
 
 By using the `gem 'bower-rails'`in our Gemfile, I have now access to the Angular modules that I need. More info on this from Luke's [Guide](https://medium.com/@lukeghenco/create-an-angular-js-app-with-a-restful-rails-api-pt-2-8fbc7177e334#.l1a8merhq). 
 
-### front-end routing by UI-Router
+**front-end routing by UI-Router**
 
 To take advantge of the UI-router's features, here's my app.js file:
 
@@ -123,7 +123,7 @@ function RestfulService($http){
 I must say that this can be considered the "heart" of the app as it takes care of all the requests to the Rails API backend. 
 
 
-### Sort with Angular Filters
+**Sort with Angular Filters**
 
 Filtering is made quite easy with the help of Angular Filters. Filtering is quite easy to setup since Angular is designed to be that way. 
 
@@ -172,7 +172,7 @@ By looking at the code,  `sort_on` takes the name of the argument that's passed 
 
 As you can see, Angular filters are pretty handy to work with. You can create custom filters to ensure that your data can be sorted accordingly. The `orderBy:` filter orders an array depending on the expression passed in. 
 
-## Final Words
+**Final Words**
 
 Overall, this is a basic Angular App that takes advantage of the Rails API built in the back-end. Since this is just a demo app to show basic capabilities of Angular, I decided not to include authorization at this time. Angular can be a very powerful tool in building fast and reliable web apps. Functionality can easily be added with the help of Angular Modules. 
 
