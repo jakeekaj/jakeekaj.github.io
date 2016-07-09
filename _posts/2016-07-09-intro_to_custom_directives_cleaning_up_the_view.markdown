@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Intro to Custom Directives: Cleaning up the View"
-date:   2016-07-09 10:39:43 +0000
+date:   2016-07-09 06:39:43 -0400
 ---
 
 
@@ -9,6 +9,7 @@ For Angular newbies, Directives might sound intimidating at first. It can be a v
 
 Take a look at the sample code: 
 
+***code may not be showing up properly due to the angular bindings `{{post.title}}` not being shown. Hit me on slack if it doesnt show. Thanks! @jakeekaj
 
 ```
 <html ng-app='app'>
@@ -76,6 +77,7 @@ Our template file will look like this:
 <h5>Date posted: {{post.created_at}}</h5>
 <em ng-show="post.comments.length">{{post.comments.length}} comments(s)</em>
 ```
+
 In essence, we just cut out the content from out main html view into this partial html view. If you're coming from a Rails background, this is like making use of View Partials. 
 
 It's always best practice to keep our views clean from clutter as much as we can, without affecting our site's functionality and useability. As I've said, there's a lot more about Directives including having its own `scopes` and `controllers`, but we will not cover that here. I just wanted to show you a very basic use of Angular Directives. It really helps in making your code much readable and easier to understand for other developers. 
