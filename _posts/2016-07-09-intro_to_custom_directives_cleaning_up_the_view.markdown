@@ -9,7 +9,7 @@ For Angular newbies, Directives might sound intimidating at first. It can be a v
 
 Take a look at the sample code: 
 
-***code may not be showing up properly due to the angular bindings `{{post.title}}` not being shown. Hit me on slack if it doesnt show. Thanks! @jakeekaj
+***code may not be showing up properly due to the angular bindings "{{post.title}}" not being shown. Hit me on slack if it doesnt show. Thanks! @jakeekaj
 
 ```
 <html ng-app='app'>
